@@ -15,7 +15,7 @@ footer {
   box-sizing: border-box;
 }
 body {
-  max-width: 900px;
+  max-width: 1000px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   margin: 0 auto;
   background-color: rgb(197, 183, 183);
@@ -54,7 +54,7 @@ body {
   text-transform: uppercase;
   font-family: Lucida Handwriting;
   display: inline-block;
-  font-size: 2rem;
+  font-size: 2.5rem;
   position: relative;
   margin-top: 40px;
 }
@@ -71,7 +71,7 @@ body {
   float: left;
   color: #87bd92;
   text-align: center;
-  padding: 8px 20px;
+  padding: 8px 35px;
   text-decoration: none;
   float: left;
   font-size: 1.2rem;
@@ -83,14 +83,10 @@ body {
   border-top-right-radius: 18px;
 }
 #nav_bar a:hover {
-  background-color: #ddd;
+  background-color: rgba(150, 196, 190, 0.8);
   color: black;
 }
 
-#nav_bar a.active {
-  background-color: #04aa6d;
-  color: white;
-}
 /*style for box which has linear gradiant color which start from here*/
  .linear_gradiant{
   background: rgb(0, 36, 20);
@@ -99,20 +95,19 @@ body {
     rgba(0, 36, 20, 1) 0%,
     rgba(89, 174, 143, 1) 0%,
     rgba(221, 228, 226, 1) 18% );
-  height: 80px;
+  height: 100px;
   text-align: center;
-  padding-top: 23px;
+  padding-top: 33px;
   color: rgb(151, 147, 107);
 } 
 /*style fo main page start from here*/
 #main_content {
   background-color: white;
   display: grid;
-  height: 500px;
+  height: 520px;
   grid-template-columns: auto auto auto;
   grid-gap: 5px;
   padding: 5px;
-  
   border-bottom:3px solid black;
   
 }
@@ -123,7 +118,8 @@ body {
   padding: 20px 0;
   font-size: 30px;
   border-radius: 10px;
-  height: 470px;
+  height: 500px;
+  box-shadow: 3px 1px 2px gray;
 
 }
 h6 {
@@ -131,7 +127,7 @@ h6 {
   padding:2px;
 }
 p {
-  font-size: small;
+font-size:initial;
   line-height: 2;
   font-family: "Times New Roman", Times, serif;
 }
@@ -150,20 +146,21 @@ p {
   padding: 20px 0;
   font-size: 30px;
   border-radius: 10px;
-  height: 470px;
+  height: 500px;
 }
 
 
-input[type=text], [type=email], select, textarea {
-  padding: px;
+input[type=text],[type=number],select,[type=email] {
+  padding:px;
   border: 1px solid #ccc;
-  font-family:cursive
+  font-family:cursive;
+  width: 150px;
+ 
 }
 
 input[type=submit] {
   cursor: pointer;
   color:black;
-
   background-color: rgb(248, 245, 255);
   font-family:'Courier New', Courier, monospace
 }
@@ -179,7 +176,8 @@ input[type=submit]:hover {
   padding: 5px;
   z-index:1;
   display: block;
-  margin-top:3%;    
+  margin-top:3%; 
+  line-height: 1.8;   
  
    }
 .contactform:hover { 
@@ -189,8 +187,11 @@ input[type=submit]:hover {
    }
    
    @keyframes gradient {
-    0%   {background-color: #5d585e;}       
-    100% {background-color: #aaa2ad;}
+    0%   {background-color: #dfd5e0;} 
+    25%   {background-color: #d69be2;} 
+    50%   {background-color: #e0a2ec;} 
+    75%   {background-color: #706c70;}       
+    100%  {background-color: rgba(150, 196, 190, 0.8);}
     } 
 
 .row:after {
@@ -198,23 +199,171 @@ input[type=submit]:hover {
   display: table;
   clear: both;
 }
-/*style for box_3 tips of the page start from here*/
-#main_content .box_3 {
-  background-color: rgba(150, 196, 190, 0.8);
-  text-align: center;
-  padding: 20px 0;
-  font-size: 30px;
-  border-radius: 10px;
-  height: 470px;
-}
-#footer{
 
+/*footerof the page start from here*/
+#footer{
   text-align: center;
   background-color: #fff;
  }
  #footer img {
   width: 50px;
-  padding: 10px;
- 
+  padding: 50px;
+  }
+  /*footer of the page end  from here*/
+  /*Responsive at 600px*/
+  /*Responsive design of the page start from here*/
+ @media screen and (max-width: 655px) {
+/*Header of the page start from here*/
+#header {
+  height: 200px;
+  max-width: 100%; 
 
- }
+}
+#header .main_header {
+  height: 80px;
+}
+#header .header_left {
+  width: 20%;
+  float: left;
+}
+#header .header_left #logo {
+  height: 80px;
+  width: 120px;
+  float: left;
+}
+/*style for logo of the page start from here*/
+
+#header .header_right {
+  width: 80%;
+  float: right;
+}
+/*style for main heading of the page start from here*/
+#header .header_right h2 {
+ font-size: 1.5rem;
+ padding-left:50px
+}
+/*Navigation of the page start from here*/
+
+#nav_bar a {
+  text-align:left;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+
+/*style for box which has linear gradiant color which start from here*/
+ .linear_gradiant{
+ font-size: .8rem;
+}
+h6{
+  font-size: 30px;
+} 
+p{
+  font-size: x-large;
+}
+.contactform {
+  margin-top:2px; 
+  line-height: .5;
+}
+input[type=text], [type=text],[type=number],select,[type=email]{
+display: inline-block;
+width:80%;
+padding:20px;
+}
+
+label {
+  padding: 25px;
+  display: inline-block;
+  text-align:left;
+  margin-top: 0px;
+}
+
+  input[type=submit] {
+    width: 100%;
+    margin-top:10px;
+    height:50px;
+  }
+  
+
+  #main_content {
+    height: auto;
+    grid-template-columns: auto;
+   }
+  /*box_1 symptmos of the page start from here*/
+  #main_content .box_2,.box_1{
+    height:auto;
+  }
+  
+  #main_content ul li{
+    font-size: xx-large;
+  }
+   #footer img {
+    width: 50px;
+    padding: 7px;
+    }
+ 
+}
+
+@media screen and (max-width: 450px) {
+  /*Header of the page start from here*/
+
+  /*style for main heading of the page start from here*/
+  #header .header_right h2 {
+   font-size: 1rem;
+   padding-left:50px
+  }
+  /*Navigation of the page start from here*/
+  
+  #nav_bar a {
+    text-align:left;
+    padding: 8px 5px;
+    font-size: .8rem;
+  }
+  
+  
+  /*style for box which has linear gradiant color which start from here*/
+  .linear_gradiant{
+    font-size: .8rem;
+   }
+   h6{
+     font-size: 30px;
+   } 
+   p{
+     font-size: x-large;
+   }
+   input[type=text], [type=text],[type=number],select,[type=email]{
+   display: inline-block;
+   width:80%;
+   padding:20px;
+   }
+   
+   label {
+     padding: 25px;
+     display: inline-block;
+     text-align:left;
+     margin-top: 0px;
+   }
+   
+     input[type=submit] {
+       width: 100%;
+       margin-top:10px;
+       height:50px;
+     }
+     
+  
+     /*box_1 symptmos of the page start from here*/
+     #main_content .box_2,.box_1{
+       height:auto
+     }
+     
+     #main_content ul li{
+       font-size: x-large;
+     }
+      #footer img {
+       width: 50px;
+       padding: 7px;
+       }
+    
+    
+
+  }
